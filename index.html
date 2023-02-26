@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>New post</title>
+  </head>
+  <body>
+    <main>
+      <form>
+        <div class="title-delete">
+          <label
+            ><input
+              type="text"
+              name="title"
+              class="input--title"
+              placeholder="Title..."
+          /></label>
+          <button class="btn--delete">delete post</button>
+        </div>
+        <label
+          ><input
+            type="text"
+            name="author"
+            class="input--author"
+            placeholder="Author..."
+        /></label>
+        <label>
+          <textarea name="content" class="content"></textarea>
+        </label>
+        <button type="submit" class="btn--submit">Submit</button>
+      </form>
+      <a href="blog.html">View posts</a>
+      <div class="post-list"></div>
+    </main>
+  </body>
+</html>

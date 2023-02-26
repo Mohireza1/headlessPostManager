@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --body-clr: #eee;
+    --post-bg: white;
+    --txt-clr: #0A0903;
+    --pr-clr: #FE5F55;
+}
+
+html {
+    height: 100%;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 35rem; */
+    background-color: var(--pr-clr);
+    color: white;
+    padding: 1.8rem 7rem;
+    margin-block-end: 2rem;
+    box-shadow: 0px 0px 10px -6px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-color: var(--body-clr);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: var(--body-clr);
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+a:hover {
+    color: white;
+}
+
+.posts {
+    column-count: 2;
+    column-gap: 3rem;
+    padding: 2rem;
+    /* float: left */
+}
+
+.post {
+    break-inside: avoid-column;
+    background-color: var(--post-bg);
+    color: var(--txt-clr);
+    padding: 3rem;
+    display: grid;
+    gap: 0.5rem;
+    line-height: 1.5;
+    border-radius: 1px;
+    margin-block-end: 3rem;
+    clear: both;
+    position: relative;
+    box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.23);
+    /* box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.59); */
+
+
+}
+
+.post::before {
+    content: attr(data-time);
+    padding: 0.4rem 2rem;
+    color: var(--post-bg);
+    background-color: var(--pr-clr);
+    font-size: 1.3rem;
+    max-width: 150px;
+    text-align: center;
+    position: absolute;
+    border-radius: 1px;
+    /* top: -15px; */
+    /* left: -15px; */
+    transform: translate(-10px, -10px);
+    /* break-inside: avoid-column !important; */
+    /* break-after: avoid-column; */
+}
+
+.post__footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+img {
+    border-radius: 50%;
+    max-width: 45px;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--pr-clr);
+}
+
+p {
+    font-size: 1.6rem;
+    margin-block-end: 1.5rem;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    opacity: 0.8;
+
+}
+
+ion-icon {
+    font-size: 3rem;
+    color: var(--pr-clr);
+    margin-inline-start: auto;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .posts {
+        column-count: 3;
+    }
+}

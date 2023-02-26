@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main {
+    width: 55%;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    /* max-width: 500px; */
+    width: 100%;
+}
+
+label {
+    width: 100%;
+}
+
+input {
+    display: block;
+    padding: 0.4rem;
+    width: 100%;
+    /* max-width: 500px; */
+}
+
+button {
+    display: block;
+    padding: 0.2rem 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    /* max-width: 500px; */
+    min-height: 200px;
+    padding: 0.5rem;
+    resize: none;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.title-delete {
+    display: flex;
+    width: 100%;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+.btn--delete {
+    position: absolute;
+    width: 20%;
+    right: 1rem;
+    background: none;
+    border: none;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    text-decoration: underline;
+    color: blue;
+}
+
+.btn--delete:hover {
+    color: blueviolet;
+    transition: 0;
+}
+
+.post-list {
+    width: 100%;
+    margin-block: 2rem;
+    /* padding: 1rem; */
+    border: 1px solid black;
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    /* gap: 4rem; */
+    padding: 1rem;
+    border-block-end: 1px solid black;
+    /* flex-direction: column; */
+}
+
+.post:last-of-type {
+    border: none;
+}
+
+.post__title {
+    justify-self: start;
+}
+
+.post__author {
+    /* margin: auto; */
+}
+
+.btn--delete-post {
+    /* width: 10%; */
+    max-width: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-self: end;
+    /* margin-left: auto; */
+}
